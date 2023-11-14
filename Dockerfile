@@ -19,6 +19,6 @@ FROM nginx:1.23-alpine
 
 WORKDIR /usr/share/nginx/html/
 
-COPY --from=build-step /app/build ./
+COPY --from=build-step /app/dist ./
 
 CMD [ "nginx", "-g", "daemon off;" ]
