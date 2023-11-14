@@ -1,5 +1,5 @@
 # BUILD STAGE
-FROM node:14-alpine as build-step
+FROM node:18-slim as build-step
 
 WORKDIR /app
 
@@ -15,7 +15,7 @@ RUN npm run build
 # NGINX STAGE
 # ========================================
 
-FROM nginx:1.23-alpine 
+FROM nginx:1.23
 
 WORKDIR /usr/share/nginx/html/
 
